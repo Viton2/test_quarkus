@@ -7,7 +7,7 @@ CREATE TABLE address(
 CREATE TABLE person(
                        id uuid PRIMARY KEY NOT NULL,
                        name varchar(100) NOT NULL,
-                       cpf varchar(10) NOT NULL,
+                       cpf varchar(11) NOT NULL,
                        address_id uuid not null,
                        CONSTRAINT fk_address_person
                            FOREIGN KEY (address_id)

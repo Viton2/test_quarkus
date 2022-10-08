@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
+    implementation 'org.projectlombok:lombok:1.18.24'
     implementation 'io.quarkus:quarkus-arc'
     implementation("io.quarkus:quarkus-spring-data-jpa")
     implementation("io.quarkus:quarkus-flyway")
@@ -19,9 +20,9 @@ dependencies {
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
     implementation("io.quarkus:quarkus-spring-data-rest")
     implementation("org.flywaydb:flyway-core:9.4.0")
+    implementation("io.quarkus:quarkus-smallrye-openapi")
 
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
-
+    compileOnly 'org.projectlombok:lombok'
 
     testImplementation 'io.quarkus:quarkus-junit5'
 
